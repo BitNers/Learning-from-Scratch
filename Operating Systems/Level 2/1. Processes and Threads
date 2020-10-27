@@ -1,0 +1,90 @@
+The Operating System is responsible to schedule the processes in the computer, but... what is a process?
+
+    To understand processes, we need to understand the program.
+    What exactly is a program?
+
+        #include <stdio.h>
+
+        int main(void){
+            printf("Hello World");
+        }
+
+    
+    This an example in C how we print 'Hello World'.
+    Look how we have commons words that made us able to understand this code.
+    This is what we call the High Level Language, which we can write a set of instructions readable for humans.
+
+    There is another HLL such as Python or Javascript, to print with Python we use ONLY one line.
+
+        print("Hello World")
+
+
+    Amazing don't ya? 
+    Therefore, you have talked about that computers only read/write binaries numbers (0-1).
+    How the computer understand what I wrote? There is something between the User Interface and the Hardware?
+    There is, and his name is the Compiler and Interpreter.
+    We won't get deep into these guys for now, let's get back to understand what is a process.
+
+
+    Well, knowing what is a program, the process is just a program in execution.
+    The program is a PASSIVE ENTITY, that means, the program is stored in Disk, instead in RAM.
+        The program doesn't have the a process stack, or program counter or registers to execute.
+
+
+    The Process is not as same as program, because it is an active entity that actions the purpose of the application.
+    The computer loads the program from Disk and store at RAM, making an active entity, including the program counter, process stack and registers in CPU.
+        The Process Stack is the Cached RAM to provide an additional space if required. 
+        This memory is divided into four sections for efficient working:
+
+            - Text sections -> Is made for compiled program code, where is Read-Only code stays when the program is launched.
+            - Data sections -> Is made for global and static variables, allocated and initialized prior to executing the program.
+            - Heap -> Is made for Dynamic Memory Allocation. 
+            - Stack -> Is made for Local Variables. The space on the stack is reserved for local variables whey they are declared.
+
+                * In Programming Languages, Local Variables is the variable declared inside a function. 
+                    Variables declared outside the function, we can call Global Variables.
+                    Static variables has your values preserved even after they are out of their scope.
+
+
+
+
+
+    Now that we know what is a process, we need to understand their differente states.
+    Remember the processes are active entities, that means they can be in any of the following states:
+
+        - NEW -> The process is being created. The OS is allocating resources. 
+        - READY -> The process is ready to run, waiting to be assigned by the processor.
+        - RUNNING -> The Program's Instructions are being executed.
+        - WAITING -> The process is waiting for some event to occur (I/O completion or reception of a signal)
+        - TERMINATED -> The process has finished execution.
+
+    But wait, we have rules to these states.
+    The first obvious is that we can't have processes in READY RUNNING WAITING or TERMINATED states, if it the NEW state was never executed.
+
+    This graph will help to understand this. The states are linked, and we must respect these rules.
+
+
+                 ____________                  
+               /              \            
+    NEW -> READY             WAITING
+                \  RUNNING  /
+                            \
+                             TERMINATED
+
+ 
+    The process always going to start with NEW state, then the must next step is READY.
+    After that, they gonna be in RUNNING STATE, which can be TERMINATED or WAITING.
+    The WAITING will wait for some event, and then, will return to the READY STATE.
+
+
+
+    As we talked before, the process is an active entity, which means they have a block control for attributes such as memory, and registers.
+    Each process is a Data Structure which contains the following.
+
+        - Process ID -> A.K.A PID, is the identification for Process in a System.
+        - Process State -> It can be Running, or Ready, etc.
+        - CPU Registers and Program Counter -> Holds the address of the next instruction to be executed for that process.
+        - CPU Scheduling -> Priority information and pointers for scheduling queues (We gonna see this later)
+        - Memory Management -> Pages/Segment Tables, Heap and Stack, etc.
+        - Accounting Information -> User and Kernel CPU usage, limits, etc.
+        - I/O Status information -> Devices allocated, open file tables, etc.

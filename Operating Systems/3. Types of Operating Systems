@@ -111,6 +111,3 @@ Clustered Systems
     Clustered technology is rapidly changing. Clustered system's usage and it's features should expand greatly as Storage Area Networks(SANs). 
     SANs allow easy attachment of multiple hosts to multiple storage units. 
     Current clusters are usually limited to two or four hosts due to the complexity of connecting the hosts to shared storage.         
-
-
-
