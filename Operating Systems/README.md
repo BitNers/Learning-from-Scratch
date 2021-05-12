@@ -1,10 +1,15 @@
-# Operating Systems.
+# Operating Systems
 
+## Prologue
+
+    This section will talk about Operating System. You will learn about what are Processes, Memory Management, Bus, Hardware, Linux Shell, and et cetera.
+
+-----
 
 
 ## 1. Intro
 
-What is Operating Systems?
+**What is Operating Systems?**
 
     A computer system has many resources (hardware and software), which may be require to complete a task. 
     The commonly required resources are input/output devices, memory, file storage space, CPU etc. 
@@ -12,33 +17,28 @@ What is Operating Systems?
     Therefore operating system is the resource manager i.e. it can manage the resource of a computer system internally. 
     The resources are processor, memory, files, and I/O devices. In simple terms, an operating system is the interface between the user and the machine.
 
-There's two views of Operating System
+There's two views of Operating System:
  - User's View
+
+        The user view of the computer refers to the interface being used. Such systems are designed for one user to monopolize its resources, to maximize the work that the user is performing. In these cases, the operating system is designed mostly for ease of use, with some attention paid to performance, and none paid to resource utilization.
+
  - System View
 
-    Operating System: User View
-        The user view of the computer refers to the interface being used. 
-        Such systems are designed for one user to monopolize its resources, to maximize the work that the user is performing. 
-        In these cases, the operating system is designed mostly for ease of use, with some attention paid to performance, and none paid to resource utilization.
-
-
-    Operating System: System View
-        Operating system can be viewed as a resource allocator also. 
-        A computer system consists of many resources like - hardware and software - that must be managed efficiently. 
-        The operating system acts as the manager of the resources, decides between conflicting requests, controls execution of programs etc.
-
+        Operating system can be viewed as a resource allocator also. A computer system consists of many resources like - hardware and software - that must be managed efficiently. The operating system acts as the manager of the resources, decides between conflicting requests, controls execution of programs etc.
+ 
 
 The Tasks of an Operating System are:
 
-    Processor management which involves putting the tasks into order and pairing them into manageable size before they go to the CPU.
-    Memory management which coordinates data to and from RAM (random-access memory) and determines the necessity for virtual memory.
-    Device management which provides interface between connected devices.
-    Storage management which directs permanent data storage.
-    Application which allows standard communication between software and your computer.
-    User interface which allows you to communicate with your computer.
+    -> Processor management which involves putting the tasks into order and pairing them into manageable size before they go to the CPU.
+    -> Memory management which coordinates data to and from RAM (random-access memory) and determines the necessity for virtual memory.
+    -> Device management which provides interface between connected devices.
+    -> Storage management which directs permanent data storage.
+    -> Application which allows standard communication between software and your computer.
+    -> User interface which allows you to communicate with your computer.
 
 
-Functions of Operating System
+Functions of Operating System:
+
     1. It boots the computer
     2. It performs basic computer tasks e.g. managing the various peripheral devices e.g. mouse, keyboard
     3. It provides a user interface, e.g. command line, graphical user interface (GUI)
@@ -56,7 +56,7 @@ The evolution of OS is directyl dependent on the development of computer systems
 Here is a quick tour of computing systems through the past fifty years in the timeline.
 
 
-Early Evolution
+**Early Evolution:**
     
     1945: ENIAC
     1949: EDVAC
@@ -65,9 +65,7 @@ Early Evolution
     1957: FORTRAN was developed
 
 
-1950s
-
-    By the late 1950s Operating systems were well improved and started supporting following usages:
+**1950s:** By the late 1950s Operating systems were well improved and started supporting following usages:
 
         - It was able to perform Single stream batch processing.
         - It could use Common, standardized, input/output routines for device access.
@@ -75,7 +73,7 @@ Early Evolution
         - Error recovery to clean up after a job terminated abnormally was added.
         - Job control languages that allowed users to specify the job definition and resource requirements were made possible.
 
-1960s
+**1960s:**
 
     1961: The dawn of minicomputers
     1962: Compatible Time-Sharing System (CTSS) from MIT
@@ -86,14 +84,15 @@ Early Evolution
     1964 and onward: Multics
     1969: The UNIX Time-Sharing System from Bell Telephone Laboratories.
 
-1970s
+**1970s**
 
-    Multi User and Multi tasking was introduced.
-    Dynamic address translation hardware and Virtual machines came into picture.
-    Modular architectures came into existence.
+    Multi User and Multi tasking was introduced;
+    Dynamic address translation hardware and Virtual machines came into picture;
+    Modular architectures came into existence;
     Personal, interactive systems came into existence.
 
-After 1970s
+**After 1970s**
+
     1971: Intel announces the microprocessor
     1972: IBM comes out with VM: the Virtual Machine Operating System
     1973: Ethernet
@@ -117,9 +116,8 @@ fast and efficient like never before.
 
 ## 3. Types of Operating Systems
 
-Types of Operating Systems
 
-Following are some of the most widely used types of Operating system.
+Following are some of the most widely used types of Operating system:
 
     1. Simple Batch System
     2. Multiprogramming Batch System
@@ -129,7 +127,7 @@ Following are some of the most widely used types of Operating system.
     6. Clustered System
 
 
-Simple Batch Systems
+**Simple Batch Systems**
 
     In this type of system, there is no direct interaction between user and the computer.
     The user has to submit a job (written on cards or tape) to a computer operator.
@@ -144,7 +142,7 @@ Simple Batch Systems
 
 
 
-Multiprogramming Batch Systems
+**Multiprogramming Batch Systems**
 
     In this the operating system picks up and begins to execute one of the jobs from memory.
     Once this job needs an I/O operation operating system switches to another job (CPU and OS always busy).
@@ -157,7 +155,7 @@ Multiprogramming Batch Systems
     In Time sharing systems the prime focus is on minimizing the response time, while in multiprogramming the prime focus is to maximize the CPU usage.
 
 
-Multiprocessor Systems
+**Multiprocessor Systems**
     
     A Multiprocessor system consists of several processors that share a common physical memory. 
     Multiprocessor system provides higher computing power and speed. 
@@ -171,7 +169,7 @@ Multiprocessor Systems
             Thereby speeding up the execution of single tasks.
 
 
-Desktop Systems
+**Desktop Systems**
 
     Earlier, CPUs and PCs lacked the features needed to protect an operating system from user programs. 
     PC operating systems therefore were neither multiuser nor multitasking. 
@@ -184,7 +182,7 @@ Desktop Systems
     Thus, some of the design decisions made in operating systems for mainframes may not be appropriate for smaller systems.
 
 
-Distributed Operating System
+**Distributed Operating System**
 
     The motivation behind developing distributed operating systems is the availability of powerful and inexpensive microprocessors and advances in communication technology.
     These advancements in technology have made it possible to design and develop distributed systems comprising of many computers that are inter connected by communication networks.
@@ -218,15 +216,19 @@ Distributed Operating System
             These systems are usually referred to as loosely coupled systems ( or distributed systems).
 
 
-Clustered Systems
+**Clustered Systems**
+
     Like parallel systems, clustered systems gather together multiple CPUs to accomplish computational work.
+
     Clustered systems differ from parallel systems, however, in that they are composed of two or more individual systems coupled together.
+
     The definition of the term clustered is not concrete; the general accepted definition is that clustered computers share storage and are closely linked via LAN networking.
+
     Clustering is usually performed to provide high availability.
-    A layer of cluster software runs on the cluster nodes. 
-        Each node can monitor one or more of the others. 
-        If the monitored machine fails, the monitoring machine can take ownership of its storage, and restart the application(s) that were running on the failed machine. 
-        The failed machine can remain down, but the users and clients of the application would only see a brief interruption of service.
+
+    A layer of cluster software runs on the cluster nodes. Each node can monitor one or more of the others. 
+        If the monitored machine fails, the monitoring machine can take ownership of its storage, and restart the application(s) that were running on the failed machine. The failed machine can remain down, but the users and clients of the application would only see a brief interruption of service.
+
     Clustered technology is rapidly changing. Clustered system's usage and it's features should expand greatly as Storage Area Networks(SANs). 
     SANs allow easy attachment of multiple hosts to multiple storage units. 
     Current clusters are usually limited to two or four hosts due to the complexity of connecting the hosts to shared storage.         
@@ -237,57 +239,58 @@ Clustered Systems
 
 The Operating System is responsible to schedule the processes in the computer, but... what is a process?
 
-    To understand processes, we need to understand the program.
-    What exactly is a program?
+To understand processes, we need to understand the program.
+What exactly is a **program**?
 
+    """
         #include <stdio.h>
 
         int main(void){
             printf("Hello World");
         }
 
-    
-    This an example in C how we print 'Hello World'.
-    Look how we have commons words that made us able to understand this code.
-    This is what we call the High Level Language, which we can write a set of instructions readable for humans.
+    """
 
-    There is another HLL such as Python or Javascript, to print with Python we use ONLY one line.
+This an example in C how we print 'Hello World'.
+Look how we have commons words that made us able to understand this code.
+
+This is what we call the High Level Language, which we can write a set of instructions readable for humans.
+
+There is another HLL such as Python or Javascript, to print with Python we use ONLY one line.
 
         print("Hello World")
 
 
-    Amazing don't ya? 
-    Therefore, you have talked about that computers only read/write binaries numbers (0-1).
-    How the computer understand what I wrote? There is something between the User Interface and the Hardware?
-    There is, and his name is the Compiler and Interpreter.
-    We won't get deep into these guys for now, let's get back to understand what is a process.
+Amazing don't ya? 
+Therefore, you have talked about that computers only read/write binaries numbers (0-1). How the computer understand what I wrote? There is something between the User Interface and the Hardware?
+There is, and his name is the Compiler and Interpreter.
+We won't get deep into these guys for now, let's get back to understand what is a process.
 
 
-    Well, knowing what is a program, the process is just a program in execution.
-    The program is a PASSIVE ENTITY, that means, the program is stored in Disk, instead in RAM.
-        The program doesn't have the a process stack, or program counter or registers to execute.
+Well, knowing what is a program, the process is just a program in execution.
+The program is a **PASSIVE ENTITY**, that means, the program is stored in Disk, instead in RAM. The program doesn't have the a process stack, or program counter or registers to execute.
 
 
-    The Process is not as same as program, because it is an active entity that actions the purpose of the application.
-    The computer loads the program from Disk and store at RAM, making an active entity, including the program counter, process stack and registers in CPU.
-        The Process Stack is the Cached RAM to provide an additional space if required. 
-        This memory is divided into four sections for efficient working:
+The Process is not as same as program, because it is an active entity that actions the purpose of the application.
+    
+The computer loads the program from Disk and store at RAM, making an active entity, including the program counter, process stack and registers in CPU. The Process Stack is the Cached RAM to provide an additional space if required. This memory is divided into four sections for efficient working:
 
-            - Text sections -> Is made for compiled program code, where is Read-Only code stays when the program is launched.
-            - Data sections -> Is made for global and static variables, allocated and initialized prior to executing the program.
-            - Heap -> Is made for Dynamic Memory Allocation. 
-            - Stack -> Is made for Local Variables. The space on the stack is reserved for local variables whey they are declared.
+    - Text sections -> Is made for compiled program code, where is Read-Only code stays when the program is launched.
+    - Data sections -> Is made for global and static variables, allocated and initialized prior to executing the program.
+    - Heap -> Is made for Dynamic Memory Allocation. 
+    - Stack -> Is made for Local Variables. The space on the stack is reserved for local variables whey they are declared.
 
-                * In Programming Languages, Local Variables is the variable declared inside a function. 
-                    Variables declared outside the function, we can call Global Variables.
-                    Static variables has your values preserved even after they are out of their scope.
+* In Programming Languages, Local Variables is the variable declared inside a function. 
 
+* Variables declared outside the function, we can call Global Variables. 
 
+* Static variables has your values preserved even after they are out of their scope.
 
 
 
-    Now that we know what is a process, we need to understand their differente states.
-    Remember the processes are active entities, that means they can be in any of the following states:
+
+
+Now that we know what is a process, we need to understand their differente states. Remember the processes are active entities, that means they can be in any of the following states:
 
         - NEW -> The process is being created. The OS is allocating resources. 
         - READY -> The process is ready to run, waiting to be assigned by the processor.
@@ -295,10 +298,9 @@ The Operating System is responsible to schedule the processes in the computer, b
         - WAITING -> The process is waiting for some event to occur (I/O completion or reception of a signal)
         - TERMINATED -> The process has finished execution.
 
-    But wait, we have rules to these states.
-    The first obvious is that we can't have processes in READY RUNNING WAITING or TERMINATED states, if it the NEW state was never executed.
+But wait, we have rules to these states. The first obvious is that we can't have processes in READY RUNNING WAITING or TERMINATED states, if it the NEW state was never executed.
 
-    This graph will help to understand this. The states are linked, and we must respect these rules.
+This graph will help to understand this. The states are linked, and we must respect these rules.
 
 
                  ____________                  
@@ -309,14 +311,13 @@ The Operating System is responsible to schedule the processes in the computer, b
                              TERMINATED
 
  
-    The process always going to start with NEW state, then the must next step is READY.
-    After that, they gonna be in RUNNING STATE, which can be TERMINATED or WAITING.
+The process always going to start with NEW state, then the must next step is READY.
+
+After that, they gonna be in RUNNING STATE, which can be TERMINATED or WAITING.
     The WAITING will wait for some event, and then, will return to the READY STATE.
 
 
-
-    As we talked before, the process is an active entity, which means they have a block control for attributes such as memory, and registers.
-    Each process is a Data Structure which contains the following.
+As we talked before, the process is an active entity, which means they have a block control for attributes such as memory, and registers. Each process is a Data Structure which contains the following.
 
         - Process ID -> A.K.A PID, is the identification for Process in a System.
         - Process State -> It can be Running, or Ready, etc.
@@ -330,49 +331,39 @@ The Operating System is responsible to schedule the processes in the computer, b
 
 ## 5. Process Scheduling
 
-As we seen before, the process is an active entity having attributes to manage it.
-    Processes has states, that changes if needed.
-    The act to change the process that is in the READY state to RUNNING state is known as Process Scheduling.
+As we seen before, the process is an active entity having attributes to manage it. Processes has states, that changes if needed. The act to change the process that is in the READY state to RUNNING state is known as Process Scheduling.
 
-    The prime idea of Process Scheduling is to keep the CPU busy all the time, to deliver the minimum response time for all programs.
-    For achieving this, the schedular must apply appropriate rules for swapping processes IN and OUT of CPU.
+The prime idea of Process Scheduling is to keep the CPU busy all the time, to deliver the minimum response time for all programs. For achieving this, the schedular must apply appropriate rules for swapping processes IN and OUT of CPU.
 
-    Scheduling will fell into two general categories:
+**Scheduling will fell into two general categories:**
         
-        - Pre-emptive -> When the currently executing process gives up the CPU voluntarily.
-        - Non Pre-empetive -> When the OS decides to favour another process, pre-empting the currently executing process.
+    - Pre-emptive -> When the currently executing process gives up the CPU voluntarily.
+    - Non Pre-empetive -> When the OS decides to favour another process, pre-empting the currently executing process.
 
 
 
-What are Scheduling Queues?
+**What are Scheduling Queues?**
 
-    All processes, upon entering into the system, are stored in the Job Queue.
-    Processes in the READY state are placed in the READY Queue.
-    Processes waiting for a device to become available are placed in Device Queues. There are unique device queues available for each I/O device.
+All processes, upon entering into the system, are stored in the Job Queue. Processes in the READY state are placed in the READY Queue. Processes waiting for a device to become available are placed in Device Queues. There are unique device queues available for each I/O device.
 
-    A new process is initially put in the READY queue. It waits in the READY queue until it is selected for execution(or dispatched). 
-    Once the process is assigned to the CPU and is executing, one of the following several events can occur:
+A new process is initially put in the READY queue. It waits in the READY queue until it is selected for execution(or dispatched). Once the process is assigned to the CPU and is executing, one of the following several events can occur:
 
-    The process could issue an I/O request, and then be placed in the I/O queue.
-    The process could create a new subprocess and wait for its termination.
-    The process could be removed forcibly from the CPU, as a result of an interrupt, and be put back in the READY queue.
+    - The process could issue an I/O request, and then be placed in the I/O queue.
+    - The process could create a new subprocess and wait for its termination.
+    - The process could be removed forcibly from the CPU, as a result of an interrupt, and be put back in the READY queue.
 
-    In the first two cases, the process eventually switches from the waiting state to the READY state, and is then put back in the READY queue. 
-    A process continues this cycle until it terminates, at which time it is removed from all queues and has its PCB and resources deallocated.
+In the first two cases, the process eventually switches from the waiting state to the READY state, and is then put back in the READY queue. A process continues this cycle until it terminates, at which time it is removed from all queues and has its PCB and resources deallocated.
 
-
-
-Types of Schedulers
-    There are three types of schedulers available:
+**Types of Schedulers**
+    
 
         - Long Term Scheduler
         - Short Term Scheduler
         - Medium Term Scheduler
     
-    Let's discuss about all the different types of Schedulers in detail:
 
+**Long Term Scheduler**
 
-    Long Term Scheduler
         Long term scheduler runs less frequently. 
         Long Term Schedulers decide which program must get into the job queue.
         From the job queue, the Job Processor, selects processes and loads them into the memory for execution. 
@@ -380,34 +371,32 @@ Types of Schedulers
         An optimal degree of Multiprogramming means the average rate of process creation is equal to the average departure rate of processes from the execution memory.
 
 
-    Short Term Scheduler
+**Short Term Scheduler**
+
         This is also known as CPU Scheduler and runs very frequently. 
         The primary aim of this scheduler is to enhance CPU performance and increase process execution rate.
 
 
-    Medium Term Scheduler
+**Medium Term Scheduler**
+
         This scheduler removes the processes from memory (and from active contention for the CPU), and thus reduces the degree of multiprogramming. 
         At some later time, the process can be reintroduced into memory and its execution van be continued where it left off. This scheme is called swapping. 
         The process is swapped out, and is later swapped in, by the medium term scheduler.
 
     
-    Swapping may be necessary to improve the process mix, or because a change in memory requirements has 
-    asovercommitted available memory, requiring memory to be freed up.
+Swapping may be necessary to improve the process mix, or because a change in memory requirements has asovercommitted available memory, requiring memory to be freed up.
 
 -----
 
 ## 6. Context Switch
 
-What is Context Switch?
-    - Switching the CPU to another process requires saving the state of the old process and loading the saved state for the new process. 
-        This task is known as a Context Switch.
+**What is Context Switch?**
+
+Switching the CPU to another process requires saving the state of the old process and loading the saved state for the new process. This task is known as a Context Switch.
         
-    - The context of a process is represented in the Process Control Block(PCB) of a process; 
-        it includes the value of the CPU registers, the process state and memory-management information. 
-        When a context switch occurs, the Kernel saves the context of the old process in its PCB and loads the saved context of the new process scheduled to run.
-    - Context switch time is pure overhead, because the system does no useful work while switching.
 
-        Its speed varies from machine to machine, depending on the memory speed, the number of registers that must be copied, and the existence 
-        of special instructions(such as a single instruction to load or store all registers). Typical speeds range from 1 to 1000 microseconds.
+    The context of a process is represented in the Process Control Block(PCB) of a process; it includes the value of the CPU registers, the process state and memory-management information. When a context switch occurs, the Kernel saves the context of the old process in its PCB and loads the saved context of the new process scheduled to run.Context switch time is pure overhead, because the system does no useful work while switching.
 
-    - Context Switching has become such a performance bottleneck that programmers are using new structures(threads) to avoid it whenever and wherever possible.
+    Its speed varies from machine to machine, depending on the memory speed, the number of registers that must be copied, and the existence of special instructions(such as a single instruction to load or store all registers). Typical speeds range from 1 to 1000 microseconds.
+    
+Context Switching has become such a performance bottleneck that programmers are using new structures(threads) to avoid it whenever and wherever possible.
